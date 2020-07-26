@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>yelp camp</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/stylesheets/main.css">
+	</head>
+<body>
+	<nav class="navbar navbar-default">
+   <div class="container-fluid">
+	   <div class="navbar-header">
+		   <a class="navbar-brand" href="/">Yelp camp</a>
+	   </div>
+	   <div class="collapse navbar-collapse">
+		   <ul class="nav navbar-nav navbar-right">
+			  <% if(!currentUser){%>
+			   <li><a href="/login">Login In</a></li> 
+			  <li><a href="/register">sign In</a></li> 
+			   <% } else{ %>
+			   <li><a><%= currentUser.username %></a></li>
+			  <li><a href="/logout">Log out</a></li>
+			   <% } %>
+		   </ul>
+		   
+	   </div>
+	</div>
+</nav>
